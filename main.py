@@ -1,26 +1,25 @@
 import cv2
 import sys
-from utils import convertir_a_gris 
+import matplotlib.pyplot as plt
+import pandas as pd
+from analysis import DataCorrelationExporter
+from image_processing import ImageProcessor
 
 def main():
+    # Rutas
+    csv_a = "/Users/adrio/Desktop/Petronor/Reto3_petronor/csv/TK 103_1.xlsx - Hoja1.csv"
+    csv_b = "/Users/adrio/Desktop/Petronor/Reto3_petronor/csv/YTK103_datos.xlsx - Sheet1.csv"
+    imagen_path = "/Users/adrio/Desktop/Petronor/Reto3_petronor/imagenes/3be67a8e-c5ad-4a99-b797-cd024b925999.jpg"
 
-    nombre_imagen_a_procesar = 'imagenes\\3be67a8e-c5ad-4a99-b797-cd024b925999.jpg'
+    # Procesamiento de datos
+    exporter = DataCorrelationExporter(csv_a, csv_b)
+    exporter.load()
+    exporter.plot_levels()
+    exporter.export_tableau_outputs("/Users/adrio/Desktop/Petronor/Reto3_petronor/csv")
 
-    print(f"Procesando imagen: {nombre_imagen_a_procesar}")
-
-    imagen_en_gris = convertir_a_gris(nombre_imagen_a_procesar)
-
-    if imagen_en_gris is not None:
-        print("¡Imagen convertida a gris exitosamente!")
-
-        cv2.imshow('Imagen Original (Color)', cv2.imread(nombre_imagen_a_procesar))
-        cv2.imshow('Resultado (Escala de Grises)', imagen_en_gris)
-
-        print("\nPresiona cualquier tecla en la ventana de la imagen para cerrar.")
-        cv2.waitKey(0) 
-        cv2.destroyAllWindows() 
-    else:
-        print("La conversión a escala de grises falló.")
+    # Procesamiento de imágenes
+    img_proc = ImageProcessor()
+    img_proc.show_original_and_gray(imagen_path)
 
 if __name__ == "__main__":
     main()
