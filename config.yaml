@@ -1,0 +1,68 @@
+# Configuración para análisis de imágenes térmicas
+# Reto3 Petronor
+
+# Umbrales de proporciones esperadas (ratios 0-1)
+umbrales_proporciones:
+  crudo:
+    minimo: 0.3
+    maximo: 0.95
+    optimo: 0.7
+  
+  emulsion:
+    minimo: 0.05
+    maximo: 0.6
+    optimo: 0.2
+  
+  agua:
+    minimo: 0.01
+    maximo: 0.3
+    optimo: 0.1
+
+# Umbrales de fiabilidad térmica
+fiabilidad_termica:
+  alta: 0.7
+  media: 0.4
+  baja: 0.0
+
+# Umbrales para estado operacional
+estado_operacional:
+  llenado:
+    nivel_min: 20.0  # % mínimo para considerar llenado
+    caudal_min: 100.0  # m3/h mínimo
+  
+  vaciado:
+    nivel_min: 20.0  # % mínimo para considerar vaciado
+    caudal_max: -100.0  # m3/h máximo (negativo)
+  
+  decantacion:
+    nivel_min: 50.0  # % mínimo para considerar decantación
+    caudal_max: 50.0  # m3/h máximo (cerca de cero)
+    caudal_min: -50.0  # m3/h mínimo (cerca de cero)
+
+# Umbrales meteorológicos para análisis de impacto
+meteorologia:
+  viento:
+    alto: 3.0  # m/s
+    medio: 1.5  # m/s
+  
+  radiacion_solar:
+    alta: 400.0  # W/m2
+    media: 200.0  # W/m2
+  
+  humedad:
+    alta: 90.0  # %
+    baja: 40.0  # %
+
+# Configuración de análisis
+analisis:
+  correlacion_minima: 0.3  # Correlación mínima para considerar significativa
+  tendencia_window: 5  # Ventana para detectar tendencias (número de puntos)
+  umbral_cambio_tendencia: 0.05  # Cambio mínimo en ratio para considerar tendencia
+
+# Configuración de salida
+output:
+  directorio_resultados: "resultados_analisis"
+  guardar_graficos: true
+  formato_graficos: "png"
+  dpi_graficos: 150
+
