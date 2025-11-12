@@ -1,0 +1,54 @@
+# Docker ignore file
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Datos y resultados
+data/
+results/
+mlruns/
+*.csv
+*.xlsx
+imagenes/
+resultados_analisis/
+
+# Logs
+logs/
+*.log
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Documentación
+docs/
+*.md
+README.md
+
+# Tests
+tests/
+test_*.py
+
+# OS
+.DS_Store
+Thumbs.db
+

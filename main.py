@@ -54,7 +54,7 @@ def main():
     Ejecuta el pipeline completo de procesamiento.
     """
     print("="*80)
-    print("🖼️  PROCESAMIENTO DE IMÁGENES TÉRMICAS - RETO3 PETRONOR")
+    print("🌡️  PETRONAITOR - PROCESAMIENTO DE IMÁGENES TÉRMICAS")
     print("="*80)
     
     # ========================================================================

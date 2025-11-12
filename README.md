@@ -1,4 +1,6 @@
-# Reto3 Petronor - Análisis de Imágenes Térmicas de Tanques Estratificados
+# PETRONAITOR - Reto3 Petronor
+
+**Sistema de Análisis y Predicción de Fiabilidad Térmica - Thermal Reliability Agent**
 
 Sistema de procesamiento y análisis de imágenes térmicas infrarrojas para la detección automática de interfaces entre capas en tanques de almacenamiento de petróleo (crudo, emulsión, agua).
 

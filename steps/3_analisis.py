@@ -787,7 +787,7 @@ def main():
     Función principal que ejecuta todo el análisis.
     """
     print("="*80)
-    print("📊 ANÁLISIS DE RESULTADOS TÉRMICOS - RETO3 PETRONOR")
+    print("📊 PETRONAITOR - ANÁLISIS DE RESULTADOS TÉRMICOS")
     print("="*80)
     
     # 1. Cargar configuración
@@ -828,10 +828,4 @@ def main():
     
     return df, correlaciones, tendencias, metricas, resumen
 
-# ============================================================================
-# EJECUCIÓN
-# ============================================================================
-
-if __name__ == "__main__":
-    resultado = main()
 
